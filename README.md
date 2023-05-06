@@ -16,7 +16,7 @@ CREATE TABLE user (
   user_availability varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   user_role varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (user_id)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1
+) 
 
 CREATE TABLE tutor (
   tutor_id int(11) NOT NULL AUTO_INCREMENT,
@@ -25,23 +25,21 @@ CREATE TABLE tutor (
   about_me varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (tutor_id),
   KEY user_id (user_id)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1
-
+) 
 CREATE TABLE student (
   student_id int(11) NOT NULL AUTO_INCREMENT,
   user_id int(11) NOT NULL,
   help_course varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (student_id),
   KEY user_id (user_id)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1
-
+) 
 CREATE TABLE staff (
   staff_id int(11) NOT NULL,
   user_id int(11) NOT NULL,
   role varchar(255) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (staff_id),
   KEY user_id (user_id)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1
+) 
 
 CREATE TABLE session (
   session_id int(11) NOT NULL,
@@ -54,7 +52,7 @@ CREATE TABLE session (
   PRIMARY KEY (session_id),
   KEY student_id (student_id),
   KEY tutor_id (tutor_id)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1
+) 
 
 CREATE TABLE course ( 
 
