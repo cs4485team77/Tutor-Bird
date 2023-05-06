@@ -1,0 +1,272 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TutorBird</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{% static 'CSS/style_website.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#content1"><img src="{% static 'Image/CrazyBird.png' %}" alt="logo" width="42px" height="42px">TutorBird</a>
+
+            <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent" aria-controls="collapseContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapseContent">
+                <ul class="navbar-nav me-2 mb-2 mb-lg-1">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#content1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content4">Tutors</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Features
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#content1">Introduction</a></li>
+                            <li><a class="dropdown-item" href="#content2">Our Services</a></li>
+                            <li><a class="dropdown-item" href="#footer">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content3">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/" target="_blank">Login</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="/register/" target="_blank">Sign Up</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2 " type="search" placeholder="Search..." aria-label="Search" size="75">
+                    <button class="btn btn-outline-warning" type="submit">Search</button>
+                </form>
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.google.com/" target="_blank"><i class="fab fa-google"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.wechat.com/" target="_blank"><i class="fab fa-weixin"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="content1">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron" id="bg-cover">
+                <div class="container">
+                    <h1>World's Finest Education!</h1>
+                    <p class="p1">Online tutoring provides a flexible and convenient way for students to receive personalized academic support from anywhere with an internet connection.
+                      With online tutoring, students can schedule sessions with expert tutors, receive instant feedback, and access a wide range of educational resources at their fingertips.
+                    </p>
+                    <a href="/login/"><button class="btn1" type="button">GET STARTED</button></a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="content2">
+      <h1>Soar to Success with TutorBird</h1>
+      <div class="p_container">
+        <p class="p2">At Tutor Bird, we believe that every student has the potential to achieve academic success. We understand that learning can be a challenging and overwhelming experience, which is why we offer personalized online tutoring services to help students reach their full potential.
+        Our team of highly qualified tutors is dedicated to providing engaging, interactive, and effective learning experiences tailored to each student's unique learning style and needs.
+        Whether you're struggling with a difficult subject or looking to improve your grades, Tutor Bird is here to help you soar to success.
+        With our flexible scheduling and affordable rates, you can access top-quality tutoring services anytime, anywhere.
+        Join the flock of successful students who have achieved their academic goals with Tutor Bird.</p>
+      </div>
+      <script type="text/javascript" src="{% static 'JS/scroll.js' %}"></script>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="S1"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="S2"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="S3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'Image/slide1.jpg' %}" class="d-block w-100" alt="a">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>A Journey through Learning and Growth</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'Image/slide2.jpg' %}" class="d-block w-100" alt="b">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Learn Anywhere, Anytime with Online Tutoring</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'Image/slide3.jpg' %}" class="d-block w-100" alt="c">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Unlock Your Potential with Personalized Online Tutoring</h5>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="content3">
+      <h1>Pricing</h1>
+      <div class="row">
+        <div class="col">
+          <ul class="price">
+            <li class="header1">Basic</li>
+            <li class="basic">$ 99.99 / year</li>
+            <li>50 Appointments</li>
+            <li>Full support</li>
+            <li>Monthly updates</li>
+            <li id="sp"><a href="/login/" class="btn2">Buy Now</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="price">
+            <li class="header2">Pro</li>
+            <li class="basic">$ 149.99 / year</li>
+            <li>120 Appointments</li>
+            <li>Full support</li>
+            <li>Monthly updates</li>
+            <li>Free cancellation</li>
+            <li id="sp"><a href="/login/" class="btn2">Buy Now</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="price">
+            <li class="header3">Premium</li>
+            <li class="basic">$ 199.99 / year</li>
+            <li>200 Appointments</li>
+            <li>Full support</li>
+            <li>Monthly updates</li>
+            <li>Free cancellation</li>
+            <li>Exceptional 1 v 1 customer service</li>
+            <li id="sp"><a href="/login/" class="btn2">Buy Now</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="content4">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Professional Tutors</h2>
+          <hr>
+          <div class="card d-flex mb-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <img class="card-img-top" src="{% static 'Image/ZinanGuo.png' %}" alt="Tutor 1">
+              </div>
+              <div class="col-lg-6">
+                <div class="card-body">
+                  <h5 class="card-title">Zinan Guo</h5>
+                  <p class="card-text">My name is Zinan Guo, I am good at teaching math and I can bring happiness and plenty of knowledge to students, I have lots of teaching experience and can flexibly deal with any problems. I'm glad you can choose me as your tutor.</p>
+                  <a href="/login/" class="btn btn-success">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <img class="card-img-top" src="{% static 'Image/JunjieLin.png' %}" alt="Tutor 2">
+              </div>
+              <div class="col-lg-6">
+                <div class="card-body">
+                  <h5 class="card-title">Junjie Lin</h5>
+                  <p class="card-text">“Hello, I'm Junjie Lin! I have been tutoring for 3 years now and it's truly been one of the most rewarding experiences of my life. I've helped so many high school students achieve their academic goals year after year and I know that YOU are more than capable of doing the same with the right help .I received my degree in Computer Science and specialize in the areas of Algebra and Geometry for high school and college students."</p>
+                  <a href="/login/" class="btn btn-success">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <img class="card-img-top" src="{% static 'Image/ZanyuChu.jpg' %}" alt="Tutor 3">
+              </div>
+              <div class="col-lg-6">
+                <div class="card-body">
+                  <h5 class="card-title">Zanyu Chu</h5>
+                  <p class="card-text">Hello! My name is Zanyu Chu. I am a recent graduate of the University of California, Santa Barbara with a degree in political science and education. I graduated with a 3.75 GPA and also completed my CSET AND CBEST (Multiple Subjects) teaching credentials on the side! I specialize in English, reading comprehension, phonics (with beginning readers), essay writing, history, French, and Political Science. I am well-versed in tutoring elementary school children, in any topic that is required; particularly common core math and english. I hope to work with you soon !</p>
+                  <a href="/login/" class="btn btn-success">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <img class="card-img-top" src="{% static 'Image/ShiyouYan.jpg' %}" alt="Tutor 3">
+              </div>
+              <div class="col-lg-6">
+                <div class="card-body">
+                  <h5 class="card-title">Shiyou Yan</h5>
+                  <p class="card-text">Hello! My name is Shiyou Yan. I am a recent graduate of the University of Dallas with a degree in political science and education. I graduated with a 4.00 GPA and also completed my CSET AND CBEST (Multiple Subjects) teaching credentials on the side! I specialize in English, reading comprehension, phonics (with beginning readers), physical, history, Chinese, and Political Science. I hope to work with you soon !</p>
+                  <a href="/login/" class="btn btn-success">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer id="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h3>TutorBird</h3>
+          <p>1122 Alpine Dr RICHARDSON, TX 75080</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p>682-344-5848</p>
+          <p>TutorBirdTB@gmail.com</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Website</h3>
+          <p><a href="https://www.CrazyBird.com">www.CrazyBird.com</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 30px auto;
+  width: 175px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+
+.backBtn {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #efefef;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+a{
+  text-decoration: none;
+}
+.backBtn:hover {
+  background-color: #ccc;
+
+}

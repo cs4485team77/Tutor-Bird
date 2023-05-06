@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'CSS/style_login.css' %}">
+</head>
+<body>
+    <div class="login-form">
+        <form method="post" action="/login/">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <div class="content">
+                {% if response == 404 %}
+                    <p id="loginErrorMessage">
+                     Password/Username doesn't match
+                    </p>
+                {% endif %}
+                <div class="input-field">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="password" placeholder="Password" required>
+                </div>
+                <div class="button">
+                    <button>Login</button>
+                </div>
+
+                <script>
+                    document.getElementById("loginErrorMessage").style.color = "red"
+                </script>
+            </div>
+            <div class="sign-up">
+                <p>Don't have an account?<a href="/register/">SIGN UP</a></p>
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+</html>

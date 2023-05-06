@@ -1,0 +1,112 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Your Schedule</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{% static 'CSS/style_view_schedule.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+
+    <form method="post" action="/interfaceTutor/">
+        <div class="title">
+            <h4 class="notification">Decide your schedule!</h4>
+        </div>
+
+        <div class="table-container">
+        <datalist id="subjects">
+            <option value="Biology"></option>
+            <option value="Chinese"></option>
+            <option value="Mathematics"></option>
+            <option value="World History"></option>
+            <option value="Government"></option>
+            <option value="Geography"></option>
+            <option value="Literature"></option>
+            <option value="Chemistry"></option>
+            <option value="Physics"></option>
+        </datalist>
+        {% csrf_token %}
+        <table>
+          <tr>
+            <th></th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+          <tr>
+            <td>9:00-10:00</td>
+            <td class="cell"><input type="text" name="text00" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a subject from the list" value= {{ text00 }}>
+            <td class="cell"><input type="text" name="text01" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text01 }}>
+            <td class="cell"><input type="text" name="text02" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text02 }}>
+            <td class="cell"><input type="text" name="text03" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text03 }}>
+            <td class="cell"><input type="text" name="text04" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text04 }}>
+          </tr>
+          <tr>
+            <td>10:00-11:00</td>
+            <td class="cell"><input type="text" name="text10" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text10 }}>
+            <td class="cell"><input type="text" name="text11" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text11 }}>
+            <td class="cell"><input type="text" name="text12" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text12 }}>
+            <td class="cell"><input type="text" name="text13" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text13 }}>
+            <td class="cell"><input type="text" name="text14" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text14 }}>
+          </tr>
+          <tr>
+            <td>11:00-12:00</td>
+            <td class="cell"><input type="text" name="text20" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text20 }}>
+            <td class="cell"><input type="text" name="text21" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text21 }}>
+            <td class="cell"><input type="text" name="text22" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text22 }}>
+            <td class="cell"><input type="text" name="text23" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text23 }}>
+            <td class="cell"><input type="text" name="text24" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text24 }}>
+          </tr>
+          <tr>
+            <td>12:00-13:00</td>
+            <td class="cell"><input type="text" name="text30" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text30 }}>
+            <td class="cell"><input type="text" name="text31" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text31 }}>
+            <td class="cell"><input type="text" name="text32" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text32 }}>
+            <td class="cell"><input type="text" name="text33" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text33 }}>
+            <td class="cell"><input type="text" name="text34" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text34 }}>
+          </tr>
+          <tr>
+            <td>13:00-14:00</td>
+            <td class="cell"><input type="text" name="text40" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text40 }}>
+            <td class="cell"><input type="text" name="text41" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text41 }}>
+            <td class="cell"><input type="text" name="text42" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text42 }}>
+            <td class="cell"><input type="text" name="text43" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text43 }}>
+            <td class="cell"><input type="text" name="text44" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text44 }}>
+          </tr>
+          <tr>
+            <td>14:00-15:00</td>
+            <td class="cell"><input type="text" name="text50" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text50 }}>
+            <td class="cell"><input type="text" name="text51" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text51 }}>
+            <td class="cell"><input type="text" name="text52" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text52 }}>
+            <td class="cell"><input type="text" name="text53" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text53 }}>
+            <td class="cell"><input type="text" name="text54" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text54 }}>
+          </tr>
+          <tr>
+            <td>15:00-16:00</td>
+            <td class="cell"><input type="text" name="text60" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text60 }}>
+            <td class="cell"><input type="text" name="text61" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text61 }}>
+            <td class="cell"><input type="text" name="text62" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text62 }}>
+            <td class="cell"><input type="text" name="text63" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text63 }}>
+            <td class="cell"><input type="text" name="text64" id="text"  list="subjects" pattern="^(Biology|Chinese|Mathematics|World History|Government|Geography|Literature|Chemistry|Physics)$" title="Please choose a fruit from the list."  value= {{ text64 }}>
+          </tr>
+
+        </table>
+        </div>
+        <div class="button-section">
+            <button id="registerBtn">Register</button>
+        </div>
+    </form>
+    <div class="cancel-btn">
+        <a href="/interfaceTutor/"><button id="cancelBtn">Cancel</button></a>
+    </div>
+</body>
+</html>

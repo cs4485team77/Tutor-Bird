@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Successful Booking Message</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{% static 'CSS/style_successful.css' %}">
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'Image/right_symbol.png' %}" alt="img">
+        <h2>You've successfully booked a session!</h2>
+        <p>{{ form_data }}</p>
+        <a href="/interface/"><button class="backBtn">Back</button></a>
+    </div>
+</body>
+</html>

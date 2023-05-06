@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input[type=search] {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-image: url('../Image/search.png');
+    background-position: 2%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    text-indent: 25px;
+}
+
+.icon {
+    color: orange;
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex {
+    margin-left: 310px;
+}
+
+.d-flex button {
+    margin-left: 10px;
+}
+.btn-outline-warning {
+    margin-right: 15rem;
+}
+
+#navbarDropdown {
+    padding: 0;
+    margin: 15px 40px 15px 0;
+}
+
+ul .dropdown-menu {
+    background-color: black;
+}
+
+.dropdown-menu li {
+    background-color: black;
+}
+
+li .dropdown-item {
+    color: orange;
+}
+
+li .dropdown-item:hover {
+    background-color: orange;
+}
+
+.rounded-circle {
+    margin-right: 10px;
+    width: 60px;
+}
+
+.icon {
+    list-style: none;
+    display: flex;
+}
+
+.icon i {
+    font-size: 18px;
+    margin: 10px;
+    padding: 0;
+    color: orange;
+    transition: color 0.2s ease;
+}
+
+.icon i:hover {
+    color: #F86551;
+    cursor: pointer;
+}
+
+.content {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(237,85,14);
+    background: linear-gradient(60deg, rgba(237,85,14,1) 29%, rgba(245,163,21,1) 62%, rgba(252,176,69,1) 100%);
+    padding-top: 106px;
+
+}
+.row{
+    display: flex;
+    flex-wrap: nowrap !important;
+    padding-top:30px;
+}
+.col-md-4{
+
+   margin:30px;
+}
+.filter{
+    display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
+    padding: 40px;
+}
+hr.rounded {
+    border-top: 8px solid black;
+    border-radius: 5px;
+}
+.filter h3{
+    margin-left: 10px;
+
+}
+
+span {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    padding: 0.65em 0.65em 0.65em 0.65em;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+#search_list_button{
+    color:black;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: #ffe54c;
+}
+
+tr {
+    text-align: center;
+    border-color: black !important;
+}
+
+.tutor_container h1 {
+    margin: 20px 0;
+}
+
+td {
+    height: 100px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+td.name,
+td.favorite,
+td.choice {
+  vertical-align: middle;
+}
+
+.favorite i{
+    width:16px;
+    height:16px;
+    color:white;
+    margin:10px;
+    padding: 0;
+}
+.favorite button {
+    background-color: transparent;
+    border: 1px black dashed;
+}
+.book{
+  color:black;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: #ffe54c;
+}

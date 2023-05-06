@@ -1,0 +1,117 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Schedule</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{% static 'CSS/style_view_schedule.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+<div class="title">
+    <h4 class="notification">You're viewing {{ tutor_id }}'s schedule. Please make a selection!</h4>
+</div>
+<form id="form_1" name="my_form" method="post" action="/success/">
+    {% csrf_token %}
+
+    <div class="table-container">
+    <table>
+      <tr>
+        <th></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+      <tr>
+        <td>9:00-10:00</td>
+        <td class="cell">{{ text00 }}</td>
+        <td class="cell">{{ text01 }}</td>
+        <td class="cell">{{ text02 }}</td>
+        <td class="cell">{{ text03 }}</td>
+        <td class="cell">{{ text04 }}</td>
+      </tr>
+      <tr>
+        <td>10:00-11:00</td>
+        <td class="cell">{{ text10 }}</td>
+        <td class="cell">{{ text11 }}</td>
+        <td class="cell">{{ text12 }}</td>
+        <td class="cell">{{ text13 }}</td>
+        <td class="cell">{{ text14 }}</td>
+      </tr>
+      <tr>
+        <td>11:00-12:00</td>
+        <td class="cell">{{ text20 }}</td>
+        <td class="cell">{{ text21 }}</td>
+        <td class="cell">{{ text22 }}</td>
+        <td class="cell">{{ text23 }}</td>
+        <td class="cell">{{ text24 }}</td>
+      </tr>
+      <tr>
+        <td>12:00-13:00</td>
+        <td class="cell">{{ text30 }}</td>
+        <td class="cell">{{ text31 }}</td>
+        <td class="cell">{{ text32 }}</td>
+        <td class="cell">{{ text33 }}</td>
+        <td class="cell">{{ text34 }}</td>
+      </tr>
+      <tr>
+        <td>13:00-14:00</td>
+        <td class="cell">{{ text40 }}</td>
+        <td class="cell">{{ text41 }}</td>
+        <td class="cell">{{ text42 }}</td>
+        <td class="cell">{{ text43 }}</td>
+        <td class="cell">{{ text44 }}</td>
+      </tr>
+      <tr>
+        <td>14:00-15:00</td>
+        <td class="cell">{{ text50 }}</td>
+        <td class="cell">{{ text51 }}</td>
+        <td class="cell">{{ text52 }}</td>
+        <td class="cell">{{ text53 }}</td>
+        <td class="cell">{{ text54 }}</td>
+      </tr>
+      <tr>
+        <td>15:00-16:00</td>
+        <td class="cell">{{ text60 }}</td>
+        <td class="cell">{{ text61 }}</td>
+        <td class="cell">{{ text62 }}</td>
+        <td class="cell">{{ text63 }}</td>
+        <td class="cell">{{ text64 }}</td>
+      </tr>
+
+    </table>
+    </div>
+    <div class="field">
+        <div class="input-field">
+            <input type="text" name="highlighted-cells" id="highlighted-cells">
+        </div>
+        <div class="input-field">
+            <input type="text" name="highlighted-row" id="highlighted-row">
+        </div>
+        <div class="input-field">
+            <input type="text" name="highlighted-column" id="highlighted-column">
+        </div>
+    </div>
+    <div class="input-field">
+            <input type="hidden" name="tutor_id" id="tutor_id" value={{ tutor_id }}>
+        </div>
+    <div class="button-section">
+        <button id="submitBtn">Submit</button>
+    </div>
+</form>
+<div class="cancel-btn">
+<a href="/interfaceTutor/"><button id="cancelBtn">Cancel</button></a>
+</div>
+<script type="text/javascript" src="{% static 'JS/btn1.js' %}"></script>
+
+
+</body>
+</html>

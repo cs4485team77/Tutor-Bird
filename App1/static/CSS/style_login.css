@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+body{
+    background-image:url("../Image/Background/login_background.jpg");
+}
+.login-form {
+    background-color: #685856;
+    width: 350px;
+    margin: 130px auto;
+}
+h1{
+  color:orange;
+  padding: 35px 35px 0 35px;
+
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+}
+
+.input-field {
+  padding: 18px 10px;
+}
+
+input[type="text"] {
+  height:45px;
+  width:250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.button{
+  padding: 18px 10px;
+}
+button {
+  height:45px;
+  width:250px;
+  background-color: orange;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover{
+  background-color:darkorange;
+}
+
+.sign-up {
+text-align: center;
+padding-bottom: 20px;
+font-size: 16px;
+color: #fff;
+}
+
+.sign-up a {
+color: #fca311;
+text-decoration: none;
+font-weight: bold;
+}
+
+.sign-up a:hover {
+text-decoration: underline;
+}
+

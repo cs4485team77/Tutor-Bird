@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.title{
+  width:100%;
+  height: 80px;
+}
+.notification{
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50px;
+}
+/* Table container */
+.table-container {
+  display: block;
+  margin: 3% auto;
+  width: 60%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow:   15px 14px 14px 0 rgba(143, 141, 143, 0.7);
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th{
+  background-color: #f2f2f2;
+
+}
+th:not(:first-child){
+  background-color: black;
+  color: white;
+  padding: 36px 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+td {
+  height: 80px;
+  vertical-align: middle;
+  text-align: center;
+  padding: 12px;
+}
+
+tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  margin: 10px 0;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Form button styles */
+.button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#submitBtn, #registerBtn{
+  background-color: #4CAF50;
+  color: white;
+}
+.cancel-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+
+
+}
+#cancelBtn{
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #D21404;
+  color: white;
+}
+#content{
+
+  background: white;
+  margin:auto;
+  height:600px;
+  padding: 0 20px;
+}
+#content img{
+  height:257px;
+  width:450px;
+  color: lightgreen;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#content h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#content .back{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #312d2d;
+  padding: 13px 20px 13px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: lightgreen;
+}
+
+
+
+

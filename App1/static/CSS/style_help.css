@@ -1,0 +1,97 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #4a4a91;
+    color: #f5f6f7;
+    font-family: Tahoma, serif;
+    font-size: 16px;
+}
+h1{
+    padding-top: 50px;
+}
+h1,
+p,h3 {
+    margin: 1em auto;
+    text-align: center;
+}
+h2{
+    padding-top:50px;
+    text-align: center;
+    color:black;
+}
+h3, p{
+    width:600px;
+}
+#description{
+    width:auto;
+    font-style: italic;
+}
+
+
+fieldset {
+    border: none;
+    padding: 1rem 0;
+}
+
+
+.text{
+    padding-top:30px;
+}
+
+
+input,
+textarea,
+select {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    min-height: 2em;
+    border-radius: 0.25rem;
+}
+
+
+input,
+textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.btn{
+    width:10%;
+    left:45%;
+    position:absolute;
+    overflow:hidden;
+    background: transparent;
+    border:2px solid purple;
+    color: purple;
+    padding:10px 20px;
+    font-weight:bold;
+}
+.btn::before{
+    text-align: center;
+    content:"";
+    display: block;
+    width:0;
+    height:100%;
+    background:purple;
+    position: absolute;
+    top:0;
+    left:-30px;
+    transform:skewX(45deg);
+    transition: all 1s;
+    z-index: -1;
+}
+.btn:hover{
+    color:white;
+}
+.btn:hover:before{
+    width:200%;
+}

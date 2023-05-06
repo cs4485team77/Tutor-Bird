@@ -1,0 +1,128 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find A Tutor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{% static 'CSS/style_find_tutors.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand me-5 ms-5" href="/index/"><img src='{% static 'Image/CrazyBird.png' %}' alt="logo" width="42px"
+                  height="42px">TutorBird</a>
+
+              <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent"
+                aria-controls="collapseContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="collapseContent">
+                <form class="d-flex">
+                    <input id="search-filter" class="form-control" type="search" placeholder="Search" aria-label="Search" size="70">
+                    <button id="submit-button" class="btn btn-outline-warning" type="submit">Submit</button>
+                </form>
+
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <img src="{% static 'Image/user_avatar.jpg' %}" class="rounded-circle shadow-lg" alt="Avatar" />
+                      Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="/aboutme/">Edit Profile</a></li>
+                      <li><a class="dropdown-item" href="/help/">Help & Support</a></li>
+                      <li><a class="dropdown-item" href="/index/">Log Out</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+
+                <div class="navbar-nav ms-auto">
+                  <ul class="icon">
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-google"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-weixin"></i></li>
+                    <li><i class="fab fa-github"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="filter">
+                        <h2>Favorite List</h2>
+                        <hr class="rounded">
+                        <section class="favorites">
+                            <ul class="favorites_list" data-my-favorites></ul>
+                        </section>
+
+                    </div>
+                </div>
+                <div class="col-md-10">
+                  <div class="tutor_container">
+                    <h1>Find A Tutor</h1>
+                    <table class="table" id="table">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Photo</th>
+                          <th>Name</th>
+                          <th>Subject</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% csrf_token %}
+                      {% for obj in query %}
+                             <tr>
+                                 <td class="id" name="tutorid">{{ obj.0 }}</td>
+                                 <td><img src="{% static 'Image/Tutors/Mathematics.jpeg' %}" class="rounded-circle" alt="Image 1"></td>
+                                 <td class="name">{{ obj.1 }}</td>
+                                 <td class="subject">Not sure</td>
+                                 <td class="favorite">
+                                     <button class="btn" data-add-to-favorite={{ obj.1 }}>
+                                         <span class="sr-only" data-favorite="Add to my favorites" data-favorite-added="Remove from my favorites"></span>
+                                         <i id="icon" class="fa-solid fa-heart"></i>Add to favorites
+                                     </button>
+
+                                 </td>
+                                 <td class="choice">
+                                     <form method="post" action="/schedule/">
+                                         {% csrf_token %}
+                                         <input type="hidden" name="tutorid" value="{{ obj.0 }}">
+                                         <button class="book" type="submit" name="book">Book</button>
+                                     </form>
+                                 </td>
+                             </tr>
+                       {% endfor %}
+
+
+                      </tbody>
+                    </table>
+                    <script type="text/javascript" src="{% static 'JS/btn.js' %}"></script>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

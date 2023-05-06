@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="{% static 'CSS/style_schedule.css' %}">
+    <title>My Schedule</title>
+</head>
+<body>
+    <table>
+      <thead>
+        <tr>
+          <th>Tutor</th>
+          <th>Student</th>
+          <th>Day</th>
+          <th>Period</th>
+          <th>Subject</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for obj in query %}
+             <tr>
+                <td name="tutor_id">{{ obj.1 }}</td>
+                <td name="student_id">{{ obj.3 }}</td>
+                <td name="day_id">{{ obj.4 }}</td>
+                <td name="period_id">{{ obj.5 }}</td>
+                <td name="subject_id">{{ obj.6 }}</td>
+             </tr>
+      {% endfor %}
+
+
+      </tbody>
+    </table>
+
+</body>
+</html>
